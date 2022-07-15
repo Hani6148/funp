@@ -1,0 +1,361 @@
+/* custom properties */
+
+*,
+*::before,
+*::after{
+box-sizing: border-box;
+}
+:root{
+--ff-primary:'Open Sans', sans-serif  ;
+--ff-page-title:'Rubik Moonrocks', cursive;
+--ff-name:'Open Sans', sans-serif ;
+--ff-jobtitle:'Explora', cursive ;
+--fw:200;
+--fw-bold:900; 
+--primary-text-color: ;
+--secondary-text-color:white ; 
+--paragraph-fs:16px;
+--title-fs: ;
+}
+@media (min-width:750px) {
+    
+    :root{
+        --paragraph-fs: ;
+        --title-fs: ; 
+    }
+}
+
+/* general styles */
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+html{
+    font-size: var(--paragraph-fs);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+body{
+
+margin: 0;
+font-family: var(--ff-primary);
+color: var(--primary-text-color);
+line-height: 2;
+overflow-x: hidden;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* header/navigation styles */
+
+.nav{
+    display: none;
+}
+.nav-toggle{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    z-index: 100;
+    right: 1rem;
+    top: 1rem;
+
+
+}
+.nav-toggle__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* typography */
+
+.page__mobile{
+    position: relative;
+    top: 0.5rem;
+}
+.page__mobile__text{
+font-family: var(--ff-page-title);
+color: var(--secondary-text-color);
+font-size: 2rem;
+width: fit-content;
+margin: auto;
+}
+.intro__text{
+position: relative;
+top: 12.5rem;
+width: fit-content;
+margin: auto;
+}
+.intro__text__title{
+    position: relative;
+    top: 1.5rem;
+    font-family: var(--ff-jobtitle);
+    color: var(--secondary-text-color);
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+}
+
+.intro__text__fullname{
+    font-family: var(--ff-name);
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+}
+
+.text-title{
+    display: none;
+}
+
+.title__mobile__text{
+    padding-top:2rem;
+    padding-bottom:2rem;
+    font-size:1.2rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.1rem;
+    width: fit-content;
+    margin: auto;
+    
+
+}
+/* background/container styles */
+
+.background{
+    position: relative;
+    width: 100vw;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.background--intro{
+    background-image: url("./../images/biography.svg");
+    height: 80vh;
+
+}
+.background--skills{
+    background-image: url("./../images/skills.svg");
+    height: fit-content;
+}
+
+.background--otherskills{
+    background-image: url("./../images/other-skills.svg");
+
+}
+
+.background--education{
+    background-image: url("./../images/education.png");
+
+}
+
+.skills__text__container{
+ position: relative;
+ height: fit-content;
+ width: 90%;
+ margin: auto;
+ padding-bottom: 3rem;
+
+}
+.skills__text__paragraph{
+    position: absolute;
+    top: 8rem;
+    width: 75%;
+    z-index: 1000;
+    height: 26rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    letter-spacing: 0.03rem;
+    line-height: 1.5rem;
+}
+.skills__text__paragraph__item{
+
+text-align: left;
+margin-bottom: 0.8rem;
+hyphens: auto;
+}
+
+    
+.skills__text__paragraph__img{
+    display: block;
+    height: 30rem;
+    max-width: 95%;
+    width: 95%;
+    margin: auto;
+}
+
+.otherskills__text__container{
+    position: relative;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3rem;
+   
+}
+.otherskills__text__paragraph{
+    position: absolute;
+    top: 10rem;
+    width: 75%;
+    z-index: 1000;
+    height: 26rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    letter-spacing: 0.03rem;
+    line-height: 1.5rem;
+}
+.otherskills__text__paragraph__item{
+   
+   text-align: left;
+   margin-bottom: 0.8rem;
+   hyphens: auto;
+}
+   
+       
+.otherskills__text__paragraph__img{
+       display: block;
+       height: 26rem;
+       max-width: 95%;
+       width: 95%;
+       margin: auto;
+}
+
+.education__text__container{
+    position: relative;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3rem;
+   
+}
+.education__text__grid{
+       display: grid;
+       gap: 1rem;
+       grid-template-columns: repeat(2,1fr);
+       position: absolute;
+       z-index: 1000;
+       top: 10rem;
+       width: 75%;
+       height: 26rem;
+       margin: auto;
+       left: 0;
+       right: 0;
+       overflow: scroll;
+       font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+       letter-spacing: 0.03rem;
+       line-height: 1.5rem;
+}
+.education__text__grid__item{
+   
+   text-align: left;
+   hyphens: auto;
+}
+   
+       
+.education__text__container__gridimg{
+       display: block;
+       height: 32rem;
+       max-width: 95%;
+       width: 95%;
+       margin: auto;
+}
+
+
+.education__text__grid__item__img{
+
+    max-height: 7rem;
+}
+
+
+
+
+
+
+
+
+
+/* styles for media larger than 500px */
+
+@media (min-width:500px) {
+    .skills__text__container,.otherskills__text__container,.education__text__container{
+     width: 65%;
+    }
+   
+}
+
+@media (min-width:650px) {
+    .skills__text__container,.otherskills__text__container,.education__text__container{
+     padding-bottom: 6rem;
+
+    }
+    .skills__text__paragraph__img,.education__text__container__gridimg{
+        height: 35rem;
+    }
+    .otherskills__text__paragraph__img{
+        height: 32rem;
+    }
+    .skills__text__paragraph,.otherskills__text__paragraph{
+        width: 80%;
+    }
+   
+}
+
+@media (min-width:1150px){
+    .background{
+    
+        width: 100vw;
+        background-size: cover;
+        height: 750px;
+        overflow: hidden;
+        position: relative;
+    }
+    .background--intro{
+        background-image: url("./../images/intro-large-background.png");
+        
+    
+    }
+    .background--skills{
+     background-image: url("./../images/large-skills-back.png");
+    }
+
+    .title__mobile{
+        display: none;
+    }
+
+    .skills__text__container{
+        transform: rotate(82deg);
+        width: 60vw;
+        max-width: 42rem;
+        position: absolute;
+        right: 8rem;
+        top: -8rem;
+       
+    }
+    .skills__text__paragraph{
+        width: 40rem;
+        right: 5rem;
+        left: unset;
+        top: 10rem;
+        overflow: hidden;
+        line-height: 2rem;
+        font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    
+    }
+    .skills__text__paragraph__img{
+        height: 60rem;
+    }
+    .skills__text__paragraph__item{
+        margin-bottom: 2rem;
+    }
+
+    .text-title{
+        display:block;
+    }
+} 
