@@ -301,8 +301,8 @@ hyphens: auto;
     .otherskills__text__paragraph__img{
         height: 32rem;
     }
-    .skills__text__paragraph,.otherskills__text__paragraph{
-        width: 80%;
+    .skills__text__paragraph,.otherskills__text__paragraph,.education__text__grid{
+        width: 55%;
     }
    
 }
@@ -357,5 +357,24 @@ hyphens: auto;
 
     .text-title{
         display:block;
+        color: var(--secondary-text-color);
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+    }
+    .skills__text__title__item1{
+        position: absolute;
+        left: calc(100vw - 64rem);
+        top: 6rem;
+    }
+    .skills__text__title__item2{
+        position: absolute;
+        left: calc(100vw - 73rem);
+        top: 20rem;
+    }
+    .skills__text__title__item3{
+        position: absolute;
+        left: calc(100vw - 60rem);
+        top: 36rem;
+    
     }
 } 
