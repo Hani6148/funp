@@ -432,7 +432,8 @@ hyphens: auto;
         height: 60rem;
     }
     .skills__text__paragraph__item{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+        
     }
 
     .text-title{
@@ -484,7 +485,7 @@ hyphens: auto;
         height: 60rem;
     }
     .otherskills__text__paragraph__item{
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     
@@ -514,6 +515,7 @@ hyphens: auto;
         position: absolute;
         right: -3rem;
         top: 0rem;
+  
 
        
     }
@@ -562,17 +564,41 @@ hyphens: auto;
     .intro__text {
         top: 15.5rem;
         left: -14rem;
+
     }
     .intro__text__title {
        
         font-size: 3rem;
+        right: 14rem;
+        opacity: 0;
+        animation-name: biographyAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
         
     }
     .intro__text__fullname {
         font-size: 4rem;
+        position: relative;
+        right: -34rem;
+        opacity: 0;
+        animation-name: biographyAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
     }
     .intro__text__leaf{
+        opacity: 0;
         display: block;
+        filter: drop-shadow(2px 4px 6px darkblue);
+        top: -15rem;
+        animation-name: leafAnimation;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-fill-mode:forwards;
+        animation-timing-function: linear;
+        
+
     }
     .page__mobile {
        display: none;
@@ -584,7 +610,8 @@ hyphens: auto;
     }
     .skills__text__container {
        
-        right: 6rem;
+        right: -44rem;
+        opacity: 0;
         
     }
     .skills__text__paragraph {
@@ -595,19 +622,54 @@ hyphens: auto;
         font-size: calc(6px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
         
     }
+    
+    .titleVisible{
+        animation-name: titlesAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .titleItem{
+        opacity: 0;
+    }
+
+    .skillsContainerVisible{
+        animation-name: skillsContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .otherskillsContainerVisible{
+        animation-name: otherskillsContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    .educationContainerVisible{
+        animation-name: educationContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
     .skills__text__title__item1 {
         left: calc(100vw - 65rem);
-        top: 8rem;
+        top: 13rem;
+        
     }
     
     .skills__text__title__item2 {
         left: calc(100vw - 70.5rem);
-        top: 24rem;
+        top: 27rem;
+       
     }
     .skills__text__title__item3 {
         left: calc(100vw - 59rem);
-        top: 38rem;
+        top: 43rem;
+       
     }
+
 
     .skills__text__paragraph__link {
         margin-top: 5rem;
@@ -623,28 +685,31 @@ hyphens: auto;
     }
     .otherskills__text__container {
       
-        left: 7rem;
+        left: -46rem;
+        opacity: 0;
    
     }
     .otherskills__text__paragraph {
-        width: 40rem;
+        width: 38rem;
         right: unset;
         left: 3rem;
-        top: 12rem;
+        top: 10rem;
+        font-size: calc(6px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+
        
     }
     .otherskills__text__title__item1 {
-        left: calc(100vw - 16rem);
-        top: 8rem;
+        left: 66rem;
+        top: 13rem;
     }
 
     .otherskills__text__title__item2 {
-        left: calc(100vw - 22rem);
-        top: 20rem;
+        left: 55rem;
+        top: 25rem;
     }
     .otherskills__text__title__item3 {
-        left: calc(100vw - 20rem);
-        top: 35rem;
+        left: 63rem;
+        top: 40rem;
     }
 
     .otherskills__text__paragraph__link {
@@ -660,5 +725,52 @@ hyphens: auto;
       
     }
 
+    .education__text__container{
+        right: -52rem;
+        opacity: 0;
+    }
+
 
 }
+
+
+
+
+
+@keyframes titlesAnimation {
+    0%   {opacity: 0;}
+
+    100% {transform: translatey(-5rem);opacity: 1;}
+  }
+
+@keyframes skillsContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:6rem;opacity: 1;}
+  }
+
+@keyframes otherskillsContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {left:7rem;opacity: 1;}
+  }
+
+@keyframes educationContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:-3rem;opacity: 1;}
+  }
+
+@keyframes biographyAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:0rem;opacity: 1;}
+  }
+
+  @keyframes leafAnimation {
+    0%   {opacity: 0;top:-15rem}
+    25% {opacity: 0.5;top:-9rem;transform: rotateY(90deg)}
+    50% {opacity: 0.75;top:-4rem;transform: rotateY(180deg)}
+    75% {opacity: 0.9;top:0rem;transform: rotateY(270deg)}    
+    100% {top:3rem;opacity: 1;transform: rotateY(360deg);filter:unset}
+  }
