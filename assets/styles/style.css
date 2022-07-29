@@ -69,16 +69,33 @@ img{
 
 .nav__list{
     list-style: none;
+    position: relative;
+    display:flex ;
 }
 .nav__item{
+    position: relative;
     display: inline-block;
     color: var(--secondary-text-color);
     font-size: 1.1rem;
     text-transform: uppercase;
-    margin-right: 5rem;
     letter-spacing: .2rem;
+    width: 15rem;
+    text-align: center;
+
+    
     
 }
+.nav__item a{
+transition: font-size ease-in-out 100ms;
+}
+
+.nav__item a:hover
+{
+font-size: 1.3rem;
+
+}
+
+
 .nav-toggle{
     display: block;
     width: 3rem;
@@ -103,11 +120,11 @@ img{
     top: 0.5rem;
 }
 .page__mobile__text{
-font-family: var(--ff-page-title);
-color: var(--secondary-text-color);
-font-size: 2rem;
-width: fit-content;
-margin: auto;
+    font-family: var(--ff-page-title);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: 0rem 1rem;
 }
 .intro__text{
 position: relative;
@@ -120,7 +137,7 @@ margin: auto;
     top: 1.5rem;
     font-family: var(--ff-jobtitle);
     color: var(--secondary-text-color);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: var(--fw-bold);
 }
 
@@ -128,6 +145,7 @@ margin: auto;
     font-family: var(--ff-name);
     color: var(--secondary-text-color);
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
 .intro__text__leaf{
     position: absolute;
@@ -144,7 +162,7 @@ margin: auto;
 .title__mobile__text{
     padding-top:2rem;
     padding-bottom:2rem;
-    font-size:1.2rem;
+    font-size:0.6rem;
     color: white;
     text-transform: uppercase;
     font-weight: var(--fw-bold);
@@ -192,15 +210,15 @@ margin: auto;
 }
 .skills__text__paragraph{
     position: absolute;
-    top: 8rem;
+    top: 5.5rem;
     width: 75%;
     z-index: 1000;
     min-height: 26rem;
     margin: auto;
     left: 0;
     right: 0;
-    overflow: scroll;
-    font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    overflow: hidden;
+    font-size: calc(10px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
     letter-spacing: 0.03rem;
     line-height: 1.5rem;
 }
@@ -249,15 +267,15 @@ hyphens: auto;
 }
 .otherskills__text__paragraph{
     position: absolute;
-    top: 8rem;
+    top: 6rem;
     width: 75%;
     z-index: 1000;
     height: 26rem;
     margin: auto;
     left: 0;
     right: 0;
-    overflow: scroll;
-    font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    overflow: hidden;
+    font-size: calc(10px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
     letter-spacing: 0.03rem;
     line-height: 1.5rem;
 }
@@ -312,13 +330,13 @@ hyphens: auto;
        grid-template-columns: repeat(2,1fr);
        position: absolute;
        z-index: 1000;
-       top: 10rem;
+       top: 8rem;
        width: 75%;
        height: 26rem;
        margin: auto;
        left: 0;
        right: 0;
-       overflow: scroll;
+       overflow: hidden;
        font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
        letter-spacing: 0.03rem;
        line-height: 1.5rem;
@@ -344,8 +362,47 @@ hyphens: auto;
     max-height: 7rem;
 }
 
+/* styles for media larger than 500px */
 
 
+@media (min-width:350px) {
+
+    .intro__text__title{
+        
+        font-size: 2rem;
+        font-weight: var(--fw-bold);
+    }
+    
+    .intro__text__fullname{
+       
+        font-size: 2rem;
+    }
+
+    .page__mobile__text {
+      
+        font-size: 2rem;
+        margin: auto;
+    }
+
+    .title__mobile__text {
+        font-size: 1rem;
+    }
+    
+    .skills__text__paragraph {
+
+        top: 7rem;
+        font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    }
+
+    .otherskills__text__paragraph {
+        top: 8rem;
+        font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    }
+    .education__text__grid{
+        top: 10rem;
+    }
+
+}
 
 
 
@@ -356,7 +413,7 @@ hyphens: auto;
 
 @media (min-width:500px) {
     .skills__text__container,.otherskills__text__container,.education__text__container{
-     width: 65%;
+     width: 90%;
     }
    
 }
@@ -370,13 +427,17 @@ hyphens: auto;
     }
     .skills__text__container,.otherskills__text__container,.education__text__container{
      padding-bottom: 6rem;
+     width: 75%;
+
 
     }
     .skills__text__paragraph__img,.education__text__container__gridimg{
         height: 35rem;
+        width: 85%;
     }
     .otherskills__text__paragraph__img{
         height: 32rem;
+        width: 85%;
     }
     .skills__text__paragraph,.otherskills__text__paragraph,.education__text__grid{
         width: 55%;
@@ -420,9 +481,9 @@ hyphens: auto;
     }
     .skills__text__paragraph{
         width: 33rem;
-        right: 4rem;
+        right: 3rem;
         left: unset;
-        top: 11rem;
+        top: 14rem;
         overflow: hidden;
         line-height: 2rem;
         font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
@@ -521,9 +582,9 @@ hyphens: auto;
     }
     .education__text__grid{
         width: 40rem;
-        right: 2rem;
+        right: 1rem;
         left: unset;
-        top: 18rem;
+        top: 20rem;
         overflow: hidden;
         line-height: 2rem;
         font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
@@ -590,7 +651,6 @@ hyphens: auto;
     .intro__text__leaf{
         opacity: 0;
         display: block;
-        filter: drop-shadow(2px 4px 6px darkblue);
         top: -15rem;
         animation-name: leafAnimation;
         animation-duration: 2s;
@@ -618,8 +678,8 @@ hyphens: auto;
         width: 40rem;
         right: 3rem;
         left: unset;
-        top: 11rem;
-        font-size: calc(6px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+        top: 13rem;
+        font-size: calc(4px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
         
     }
     
@@ -643,7 +703,7 @@ hyphens: auto;
     .otherskillsContainerVisible{
         animation-name: otherskillsContainerAnimation;
         animation-duration: 1.5s;
-        animation-delay: 1s;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
     }
     .educationContainerVisible{
@@ -673,14 +733,14 @@ hyphens: auto;
 
     .skills__text__paragraph__link {
         margin-top: 5rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .skills__text__paragraph__link__leaf {
         left: 0.5rem;
         top: -3.9rem;
         height: 6rem;
-        width: 19rem;
+        width: 16rem;
       
     }
     .otherskills__text__container {
@@ -690,11 +750,11 @@ hyphens: auto;
    
     }
     .otherskills__text__paragraph {
-        width: 38rem;
+        width: 34rem;
         right: unset;
-        left: 3rem;
-        top: 10rem;
-        font-size: calc(6px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+        left: 6rem;
+        top: 13rem;
+        font-size: calc(4px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
 
        
     }
@@ -721,7 +781,7 @@ hyphens: auto;
         left: 0.5rem;
         top: -3.9rem;
         height: 6rem;
-        width: 19rem;
+        width: 16rem;
       
     }
 
@@ -769,8 +829,9 @@ hyphens: auto;
 
   @keyframes leafAnimation {
     0%   {opacity: 0;top:-15rem}
-    25% {opacity: 0.5;top:-9rem;transform: rotateY(90deg)}
-    50% {opacity: 0.75;top:-4rem;transform: rotateY(180deg)}
-    75% {opacity: 0.9;top:0rem;transform: rotateY(270deg)}    
+    25% {opacity: 0.1;top:-9rem;transform: rotateY(90deg)}
+    50% {opacity: 0.25;top:-4rem;transform: rotateY(180deg)}
+    75% {opacity: 0.5;top:0rem;transform: rotateY(270deg)}    
     100% {top:3rem;opacity: 1;transform: rotateY(360deg);filter:unset}
   }
+
