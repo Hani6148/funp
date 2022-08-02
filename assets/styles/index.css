@@ -1,0 +1,837 @@
+/* custom properties */
+
+*,
+*::before,
+*::after{
+box-sizing:content-box;
+}
+:root{
+--ff-primary:'Open Sans', sans-serif  ;
+--ff-page-title:'Rubik Moonrocks', cursive;
+--ff-name:'Open Sans', sans-serif ;
+--ff-jobtitle:'Explora', cursive ;
+--fw:200;
+--fw-bold:900; 
+--primary-text-color: ;
+--secondary-text-color:white ; 
+--paragraph-fs:16px;
+--title-fs: ;
+}
+@media (min-width:750px) {
+    
+    :root{
+        --paragraph-fs: ;
+        --title-fs: ; 
+    }
+}
+
+/* general styles */
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+html{
+    font-size: var(--paragraph-fs);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+
+body{
+
+margin: 0;
+font-family: var(--ff-primary);
+color: var(--primary-text-color);
+line-height: 2;
+overflow-x: hidden;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* header/navigation styles */
+
+.nav{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4rem;
+    width: fit-content;
+    margin: auto;
+    z-index: 1000;
+}
+
+.nav__list{
+    list-style: none;
+    position: relative;
+    display:flex ;
+}
+.nav__item{
+    position: relative;
+    display: inline-block;
+    color: var(--secondary-text-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    width: 15rem;
+    text-align: center;
+
+    
+    
+}
+.nav__item a{
+transition: font-size ease-in-out 100ms;
+}
+
+.nav__item a:hover
+{
+font-size: 1.3rem;
+
+}
+
+
+.nav-toggle{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    z-index: 100;
+    right: 1rem;
+    top: 1rem;
+
+
+}
+.nav-toggle__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* typography */
+
+.page__mobile{
+    position: relative;
+    top: 0.5rem;
+}
+.page__mobile__text{
+    font-family: var(--ff-page-title);
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: 0rem 1rem;
+}
+.intro__text{
+position: relative;
+top: 12.5rem;
+width: fit-content;
+margin: auto;
+}
+.intro__text__title{
+    position: relative;
+    top: 1.5rem;
+    font-family: var(--ff-jobtitle);
+    color: var(--secondary-text-color);
+    font-size: 1.4rem;
+    font-weight: var(--fw-bold);
+}
+
+.intro__text__fullname{
+    font-family: var(--ff-name);
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.intro__text__leaf{
+    position: absolute;
+    display: none;
+    top: 3rem;
+    left: 25.7rem;
+    width: 9rem;
+}
+
+.text-title{
+    display: none;
+}
+
+.title__mobile__text{
+    padding-top:2rem;
+    padding-bottom:2rem;
+    font-size:0.6rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.1rem;
+    width: fit-content;
+    margin: auto;
+    
+
+}
+/* background/container styles */
+
+.background{
+    position: relative;
+    width: 100vw;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.background--intro{
+    background-image: url("./../images/biography.svg");
+    height: 80vh;
+
+}
+.background--skills{
+    background-image: url("./../images/skills.svg");
+    height: fit-content;
+}
+
+.background--otherskills{
+    background-image: url("./../images/other-skills.svg");
+
+}
+
+.background--education{
+    background-image: url("./../images/education.png");
+
+}
+
+.skills__text__container{
+ position: relative;
+ height: fit-content;
+ width: 90%;
+ margin: auto;
+ padding-bottom: 3rem;
+
+}
+.skills__text__paragraph{
+    position: absolute;
+    top: 5.5rem;
+    width: 75%;
+    z-index: 1000;
+    min-height: 26rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    font-size: calc(10px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    letter-spacing: 0.03rem;
+    line-height: 1.5rem;
+}
+.skills__text__paragraph__item{
+
+text-align: left;
+margin-bottom: 0.8rem;
+hyphens: auto;
+}
+.skills__text__paragraph__link{
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: auto;
+    margin-top: 4rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+}
+.skills__text__paragraph__link__leaf{
+    position: relative;
+    left: 0.3rem;
+    top: -2.7rem;
+    height: 4rem;
+    z-index: -1;
+    width: 12rem;
+    filter: drop-shadow(2px 4px 6px black)contrast(0.5);
+}
+.skills__text__paragraph__img{
+    display: block;
+    height: 30rem;
+    max-width: 95%;
+    width: 95%;
+    margin: auto;
+}
+
+.otherskills__text__container{
+    position: relative;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3rem;
+   
+}
+.otherskills__text__paragraph{
+    position: absolute;
+    top: 6rem;
+    width: 75%;
+    z-index: 1000;
+    height: 26rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    font-size: calc(10px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    letter-spacing: 0.03rem;
+    line-height: 1.5rem;
+}
+.otherskills__text__paragraph__item{
+   
+   text-align: left;
+   margin-bottom: 0.8rem;
+   hyphens: auto;
+}
+   
+       
+.otherskills__text__paragraph__img{
+       display: block;
+       height: 26rem;
+       max-width: 95%;
+       width: 95%;
+       margin: auto;
+}
+
+.education__text__container{
+    position: relative;
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 3rem;
+   
+}
+.otherskills__text__paragraph__link{
+    display: block;
+    position: relative;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: auto;
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+}
+.otherskills__text__paragraph__link__leaf{
+    position: relative;
+    left: 0.3rem;
+    top: -2.7rem;
+    height: 4rem;
+    z-index: -1;
+    width: 12rem;
+    filter: drop-shadow(2px 4px 6px black)contrast(0.5);
+}
+.education__text__grid{
+       display: grid;
+       gap: 1rem;
+       grid-template-columns: repeat(2,1fr);
+       position: absolute;
+       z-index: 1000;
+       top: 8rem;
+       width: 75%;
+       height: 26rem;
+       margin: auto;
+       left: 0;
+       right: 0;
+       overflow: hidden;
+       font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+       letter-spacing: 0.03rem;
+       line-height: 1.5rem;
+}
+.education__text__grid__item{
+   
+   text-align: left;
+   hyphens: auto;
+}
+   
+       
+.education__text__container__gridimg{
+       display: block;
+       height: 32rem;
+       max-width: 95%;
+       width: 95%;
+       margin: auto;
+}
+
+
+.education__text__grid__item__img{
+
+    max-height: 7rem;
+}
+
+/* styles for media larger than 500px */
+
+
+@media (min-width:350px) {
+
+    .intro__text__title{
+        
+        font-size: 2rem;
+        font-weight: var(--fw-bold);
+    }
+    
+    .intro__text__fullname{
+       
+        font-size: 2rem;
+    }
+
+    .page__mobile__text {
+      
+        font-size: 2rem;
+        margin: auto;
+    }
+
+    .title__mobile__text {
+        font-size: 1rem;
+    }
+    
+    .skills__text__paragraph {
+
+        top: 7rem;
+        font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    }
+
+    .otherskills__text__paragraph {
+        top: 8rem;
+        font-size: calc(11px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    }
+    .education__text__grid{
+        top: 10rem;
+    }
+
+}
+
+
+
+
+
+
+/* styles for media larger than 500px */
+
+@media (min-width:500px) {
+    .skills__text__container,.otherskills__text__container,.education__text__container{
+     width: 90%;
+    }
+   
+}
+
+@media (min-width:650px) {
+
+    .background--intro{
+        background-image: url("./../images/intro-large-background.png");
+        
+    
+    }
+    .skills__text__container,.otherskills__text__container,.education__text__container{
+     padding-bottom: 6rem;
+     width: 75%;
+
+
+    }
+    .skills__text__paragraph__img,.education__text__container__gridimg{
+        height: 35rem;
+        width: 85%;
+    }
+    .otherskills__text__paragraph__img{
+        height: 32rem;
+        width: 85%;
+    }
+    .skills__text__paragraph,.otherskills__text__paragraph,.education__text__grid{
+        width: 55%;
+    }
+
+   
+}
+
+@media (min-width:950px){
+    .background{
+    
+        width: 100vw;
+        background-size: cover;
+        height: 750px;
+        overflow: hidden;
+        position: relative;
+    }
+ 
+    .background--skills{
+     background-image: url("./../images/large-skills-back.png");
+    }
+    .background--otherskills{
+        background-image: url("./../images/large-otherskills-back.png");
+    }
+    .background--education{
+        background-image: url("./../images/large-education-back.png");
+    }
+
+    .title__mobile{
+        display: none;
+    }
+
+    .skills__text__container{
+        transform: rotate(82deg);
+        width: 60vw;
+        max-width: 42rem;
+        position: absolute;
+        right: 3rem;
+        top: -8rem;
+       
+    }
+    .skills__text__paragraph{
+        width: 33rem;
+        right: 3rem;
+        left: unset;
+        top: 14rem;
+        overflow: hidden;
+        line-height: 2rem;
+        font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    
+    }
+    .skills__text__paragraph__img{
+        height: 60rem;
+    }
+    .skills__text__paragraph__item{
+        margin-bottom: 1rem;
+        
+    }
+
+    .text-title{
+        display:block;
+        color: var(--secondary-text-color);
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+    }
+    .skills__text__title__item1{
+        position: absolute;
+        left: calc(100vw - 54rem);
+        top: 6rem;
+    }
+    .skills__text__title__item2{
+        position: absolute;
+        left: calc(100vw - 59.5rem);
+        top: 19rem;
+    }
+    .skills__text__title__item3{
+        position: absolute;
+        left: calc(100vw - 50rem);
+        top: 35rem;
+    
+    }
+
+    .otherskills__text__container{
+        
+        transform: rotate(-86deg);
+        width: 60vw;
+        max-width: 42rem;
+        position: absolute;
+        left: -2rem;
+        top: -8rem;
+
+       
+    }
+    .otherskills__text__paragraph{
+        width: 29rem;
+        right: unset;
+        left: 3rem;
+        top: 12rem;
+        overflow: hidden;
+        line-height: 2rem;
+        font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    
+    }
+    .otherskills__text__paragraph__img{
+        height: 60rem;
+    }
+    .otherskills__text__paragraph__item{
+        margin-bottom: 1rem;
+    }
+
+    
+    .otherskills__text__title__item1{
+        position: absolute;
+        left: calc(100vw - 12rem);
+        top: 9rem;
+    }
+    .otherskills__text__title__item2{
+        position: absolute;
+        left: calc(100vw - 20rem);
+        top: 21rem;
+    
+    }
+    .otherskills__text__title__item3{
+        position: absolute;
+        left: calc(100vw - 15rem);
+        top: 36rem;
+    
+    }
+
+    .education__text__container{
+        
+        transform: rotate(-107deg);
+        width: 41rem;
+        max-width: 41rem;
+        position: absolute;
+        right: -3rem;
+        top: 0rem;
+  
+
+       
+    }
+    .education__text__grid{
+        width: 40rem;
+        right: 1rem;
+        left: unset;
+        top: 20rem;
+        overflow: hidden;
+        line-height: 2rem;
+        font-size: calc(9px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+    
+    }
+    
+    .education__text__container__gridimg{
+        height: 55rem;
+    }
+
+    
+    .education__text__title__item1{
+        position: absolute;
+        left: calc(100vw - 54rem);
+        top: 12rem;
+        transform: rotate(-16deg);
+    }
+    .education__text__title__item2{
+        position: absolute;
+        left: calc(100vw - 57rem);
+        top: 32rem;
+        transform: rotate(-110deg); 
+    }
+   
+} 
+
+@media (min-width:1150px){
+
+    .nav{
+        display: block;
+       
+    }
+
+    .nav-toggle {
+        display: none;
+       
+    }
+    .intro__text {
+        top: 15.5rem;
+        left: -14rem;
+
+    }
+    .intro__text__title {
+       
+        font-size: 3rem;
+        right: 14rem;
+        opacity: 0;
+        animation-name: biographyAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+        
+    }
+    .intro__text__fullname {
+        font-size: 4rem;
+        position: relative;
+        right: -34rem;
+        opacity: 0;
+        animation-name: biographyAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .intro__text__leaf{
+        opacity: 0;
+        display: block;
+        top: -15rem;
+        animation-name: leafAnimation;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-fill-mode:forwards;
+        animation-timing-function: linear;
+        
+
+    }
+    .page__mobile {
+       display: none;
+    }
+
+    .text-title{
+       
+        font-size: 1rem;
+    }
+    .skills__text__container {
+       
+        right: -44rem;
+        opacity: 0;
+        
+    }
+    .skills__text__paragraph {
+        width: 40rem;
+        right: 3rem;
+        left: unset;
+        top: 13rem;
+        font-size: calc(4px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+        
+    }
+    
+    .titleVisible{
+        animation-name: titlesAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .titleItem{
+        opacity: 0;
+    }
+
+    .skillsContainerVisible{
+        animation-name: skillsContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .otherskillsContainerVisible{
+        animation-name: otherskillsContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    .educationContainerVisible{
+        animation-name: educationContainerAnimation;
+        animation-duration: 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .skills__text__title__item1 {
+        left: calc(100vw - 65rem);
+        top: 13rem;
+        
+    }
+    
+    .skills__text__title__item2 {
+        left: calc(100vw - 70.5rem);
+        top: 27rem;
+       
+    }
+    .skills__text__title__item3 {
+        left: calc(100vw - 59rem);
+        top: 43rem;
+       
+    }
+
+
+    .skills__text__paragraph__link {
+        margin-top: 5rem;
+        font-size: 1rem;
+    }
+
+    .skills__text__paragraph__link__leaf {
+        left: 0.5rem;
+        top: -3.9rem;
+        height: 6rem;
+        width: 16rem;
+      
+    }
+    .otherskills__text__container {
+      
+        left: -46rem;
+        opacity: 0;
+   
+    }
+    .otherskills__text__paragraph {
+        width: 34rem;
+        right: unset;
+        left: 6rem;
+        top: 13rem;
+        font-size: calc(4px + (26 - 14) * ((100vw - 350px) / (1600 - 300)));
+
+       
+    }
+    .otherskills__text__title__item1 {
+        left: 66rem;
+        top: 13rem;
+    }
+
+    .otherskills__text__title__item2 {
+        left: 55rem;
+        top: 25rem;
+    }
+    .otherskills__text__title__item3 {
+        left: 63rem;
+        top: 40rem;
+    }
+
+    .otherskills__text__paragraph__link {
+        margin-top: 5rem;
+        font-size: 1.1rem;
+    }
+
+    .otherskills__text__paragraph__link__leaf {
+        left: 0.5rem;
+        top: -3.9rem;
+        height: 6rem;
+        width: 16rem;
+      
+    }
+
+    .education__text__container{
+        right: -52rem;
+        opacity: 0;
+    }
+
+
+}
+
+
+
+
+
+@keyframes titlesAnimation {
+    0%   {opacity: 0;}
+
+    100% {transform: translatey(-5rem);opacity: 1;}
+  }
+
+@keyframes skillsContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:6rem;opacity: 1;}
+  }
+
+@keyframes otherskillsContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {left:7rem;opacity: 1;}
+  }
+
+@keyframes educationContainerAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:-3rem;opacity: 1;}
+  }
+
+@keyframes biographyAnimation {
+    0%   {opacity: 0;}
+
+    100% {right:0rem;opacity: 1;}
+  }
+
+  @keyframes leafAnimation {
+    0%   {opacity: 0;top:-15rem}
+    25% {opacity: 0.1;top:-9rem;transform: rotateY(90deg)}
+    50% {opacity: 0.25;top:-4rem;transform: rotateY(180deg)}
+    75% {opacity: 0.5;top:0rem;transform: rotateY(270deg)}    
+    100% {top:3rem;opacity: 1;transform: rotateY(360deg);filter:unset}
+  }
+
