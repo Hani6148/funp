@@ -50,7 +50,7 @@ font-family: var(--ff-primary);
 color: var(--primary-text-color);
 line-height: 2;
 overflow-x: hidden;
-background-image: url(../images/projects-back.png);
+background: linear-gradient(181deg, #7786e2, #000000);
 background-size: cover;
 background-attachment: fixed;
 }
@@ -187,7 +187,6 @@ font-size: 1.3rem;
     margin: auto;
     left: 0;
     right: 111px;
-    color: white;
 }
 
 
@@ -197,10 +196,43 @@ font-size: 1.3rem;
     right: 0;
     margin: auto;
     width: fit-content;
-    color: #6FACDB;
 }
 
-.project__card__lines{
+.project__card__title__item1--eventbook{
+    color: white;
+
+}
+
+.project__card__title__item2--eventbook{
+    color: #6FACDB;
+
+}
+
+.project__card__title__item2--philit{
+    background: linear-gradient(to right, rgba(251, 251, 251,1), rgb(16, 52, 172));
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    left: 0;
+
+}
+
+.project__card__title__item2--shoppies{
+
+    color: white;
+    left: 0;
+}
+
+.project__card__title__item1--trivia{
+    color: white;
+
+}
+
+.project__card__title__item2--trivia{
+    color: #db6fae;
+
+}
+
+.project__card__lines{  
     position: relative;
     top: 0.5rem;
     height: fit-content;
@@ -214,8 +246,6 @@ font-size: 1.3rem;
     position: absolute;
     left: 0;
     right: 40px;
-    border: 1px solid #00d7ff;
-    background-color: #00d7ff;
     width: 75%;
     height: 0.35rem;
 
@@ -226,11 +256,48 @@ font-size: 1.3rem;
     top: 2rem;
     left: 0;
     right: -40px;
-    border: 1px solid white;
-    background-color: white;
     width: 75%;
     height: 0.35rem;
   
+}
+
+
+.project__card__lines__line1--eventbook{
+    border: 1px solid #00d7ff;
+    background-color: #00d7ff;
+}
+
+.project__card__lines__line2--eventbook{
+    border: 1px solid white;
+    background-color: white;
+}
+
+.project__card__lines__line1--philit{
+    border: 1px solid #00d7ff;
+    background: linear-gradient(to right, rgb(251, 251, 251), rgb(16, 52, 172));
+}
+
+.project__card__lines__line2--philit{
+    border: 1px solid white;
+    background-color: white;
+}
+
+.project__card__lines__line1--shoppies{
+    background: linear-gradient(to right, rgba(251, 251, 251, 0.433), rgb(156, 47, 17));
+}
+
+.project__card__lines__line2--shoppies{
+    border: 1px solid white;
+    background-color: white;
+}
+
+.project__card__lines__line1--trivia{
+    background: linear-gradient(to right, rgb(251, 251, 251), rgb(243, 26, 167));
+}
+
+.project__card__lines__line2--trivia{
+    border: 1px solid white;
+    background-color: white;
 }
 
 .project__card__desc{
@@ -247,12 +314,31 @@ font-size: 1.3rem;
     top: 5rem;
     width: fit-content;
     margin: auto;
-    color: white;
     font-weight: bolder;
-    background-color: #5271FF;
     border-radius: 10px;
     padding: 0.3rem 0.5rem;
     
+}
+
+.project__card__link--eventbook{
+    background-color: #5271FF;
+    color: white;
+
+}
+.project__card__link--philit{
+    background: linear-gradient(to right, rgba(251, 251, 251, 0.326), rgb(16, 52, 172));
+    color: white;
+
+}
+.project__card__link--shoppies{
+    background: linear-gradient(to right, rgba(251, 251, 251, 0.538), rgb(192, 9, 9));
+    color: white;
+
+}
+.project__card__link--trivia{
+    background: linear-gradient(to right, rgba(251, 251, 251, 0.538), rgb(173, 89, 118));
+    color: white;
+
 }
 
 
@@ -301,9 +387,7 @@ font-size: 1.3rem;
 
 
 @media (min-width:1000px){
-    body{
-        background-image: url("../images/work-large.png");
-    }
+  
 
     .nav{
         display: block;
@@ -358,32 +442,57 @@ font-size: 1.3rem;
         animation-fill-mode: forwards;
     }
 
-    .project__img__link{
+
+    .project__img__link--eventbook{
         max-width:  45rem;
-        background-image: url(../images/eventbook-large.png);
         content: url("../images/eventbook-large.png");
     }
+
+
+    .project__img__link--philit{
+        max-width:  45rem;
+        content: url("../images/philIT-lg.png");
+
+    }
+
+    .project__img__link--shoppies{
+        max-width:  45rem;
+        content: url("../images/shoppies-lg.png");
+
+    }
+
+    .project__img__link--trivia{
+        max-width:  45rem;
+        content: url("../images/trivia-lg.png");
+
+    }
+
     .project__card__title{
 
         left: 5vw;
     }
     .project__card__title__item1 {
         font-size: 3rem;
-        position: absolute;
         top: -1.5rem;
         left: -4rem;
         text-transform: uppercase;
     }
     .project__card__title__item2 {
-        position: absolute;
         left: 100px;
         right: 0;
-        margin: auto;
-        width: fit-content;
-        color: #6FACDB;
         font-size: 4rem;
         text-transform: uppercase;
     }
+
+    .project__card__title__item2--philit {
+        left: 0;
+    }
+
+    .project__card__title__item2--shoppies {
+        left: 0;
+    }
+
+
     .project__card__lines{
         top: 6rem;
     }
