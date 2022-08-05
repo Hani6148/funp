@@ -3,6 +3,10 @@ const skillsContainer = document.querySelector(".skills__text__container");
 const otherskillsContainer = document.querySelector(".otherskills__text__container");
 const educationContainer = document.querySelector(".education__text__container");
 
+const navToggle = document.querySelector(".nav-toggle");
+const mobileNav = document.querySelector(".mobileNav");
+const closeMark = document.querySelector(".mobileNav__closeMark");
+
 
 
 function handleTitlesIntersection(entries) {
@@ -63,3 +67,12 @@ otherskillsContainerObserver.observe(otherskillsContainer)
 
 const educationContainerObserver = new IntersectionObserver(educationContainerIntersection);
 educationContainerObserver.observe(educationContainer)
+
+
+navToggle.onclick = function(){
+  mobileNav.classList.add("mobileNav__show")
+}
+
+closeMark.onclick = function(){
+  mobileNav.classList.remove("mobileNav__show")
+}

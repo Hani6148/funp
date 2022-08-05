@@ -60,6 +60,54 @@ img{
 }
 
 /* header/navigation styles */
+.mobileNav{
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(177deg, #0b566d, #b0d2eb);;
+}
+
+.mobileNav__list{
+    list-style: none;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20vh;
+    color: white;
+    padding: 0;
+
+
+}
+.mobileNav__list__item{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.mobileNav__title{
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+.mobileNav__closeMark{
+    position: absolute;
+    right: 2rem;
+    top: 0rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.mobileNav__show{
+    display: block;
+}
 
 .nav{
     display: none;
