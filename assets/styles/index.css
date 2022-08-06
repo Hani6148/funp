@@ -60,11 +60,12 @@ img{
     display: none;
     position: fixed;
     z-index: 10000;
-    top: 0;
+    top: -59rem;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(177deg, #0b566d, #b0d2eb);;
+    background: linear-gradient(177deg, #0b566d, #b0d2eb);
+    opacity: 0;
 }
 
 .mobileNav__list{
@@ -103,6 +104,10 @@ img{
 
 .mobileNav__show{
     display: block;
+    animation-name: mobileNavShow;
+    animation-duration: 0.5s;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
 }
 
 
@@ -889,3 +894,8 @@ hyphens: auto;
     100% {top:3rem;opacity: 1;transform: rotateY(360deg);filter:unset}
   }
 
+  @keyframes mobileNavShow {
+    0%   {opacity: 0;}
+
+    100% {top:0; opacity: 1;}
+  }
