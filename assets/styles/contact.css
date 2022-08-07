@@ -272,7 +272,6 @@ input[type=text], select, textarea {
   .social-icon{
     
     height: 100%;
-    filter: opacity(0.5);
   }
   
   @media (min-width:400px){
@@ -286,7 +285,10 @@ input[type=text], select, textarea {
 
 @media (min-width:900px){
    body{
-    background: linear-gradient(to right, #fff, #fff 54%, #d8d8e2 62%);    }
+    background: linear-gradient(to right, #fff, #fff 50%, #b2b2ce 50%);
+    }
+
+
     .nav{
         display: block;
        
@@ -319,6 +321,7 @@ input[type=text], select, textarea {
 
     #form{
         padding: 1rem;
+        background-color: #b2b2ce;
     }
 
     input[type=submit] {
