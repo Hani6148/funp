@@ -321,6 +321,7 @@ input[type=text], select, textarea {
 
     #form{
         padding: 1rem;
+        background-color: #b2bad170;
     }
 
     input[type=submit] {
