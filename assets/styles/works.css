@@ -335,7 +335,7 @@ z-index: 100;
 }
 
 .project__card__title__item2--philit{
-    background: linear-gradient(to right, rgba(251, 251, 251,1), rgb(16, 52, 172));
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 197, 7));
     -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
     left: 0;
@@ -399,8 +399,8 @@ z-index: 100;
 }
 
 .project__card__lines__line1--philit{
-    border: 1px solid #00d7ff;
-    background: linear-gradient(to right, rgb(251, 251, 251), rgb(16, 52, 172));
+    
+    background: linear-gradient(to right, rgb(251, 251, 251), rgb(255, 162, 0));
 }
 
 .project__card__lines__line2--philit{
@@ -452,7 +452,7 @@ z-index: 100;
 
 }
 .project__card__link--philit{
-    background: linear-gradient(to right, rgba(251, 251, 251, 0.326), rgb(16, 52, 172));
+    background: linear-gradient(to right, rgba(251, 251, 251, 0.326), rgb(252, 155, 9));
     color: white;
 
 }
@@ -582,7 +582,7 @@ z-index: 100;
 
     .project__img__link--philit{
         max-width:  45rem;
-        content: url("../images/philIT-lg.png");
+        content: url("../images/srsly.jpg");
 
     }
 
