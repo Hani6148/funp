@@ -145,14 +145,20 @@ img{
     
     
 }
+
 .nav__item a{
-transition: font-size ease-in-out 100ms;
+transition: ease-in-out 100ms;
+opacity: 0.5;
+}
+
+.nav__item a.nav__item__3{
+    opacity: 1;
 }
 
 .nav__item a:hover
 {
 font-size: 1.3rem;
-
+opacity: 1;
 }
 
 
